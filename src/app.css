@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* For WebKit browsers */
+*::-webkit-scrollbar {
+	width: 14px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffe6f9; /* pastel pink */
+	box-shadow: inset 0 0 5px hotpink;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: linear-gradient(45deg, hotpink, deeppink);
+
+	box-shadow: 0 0 5px fuchsia;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(45deg, #ff69b4, #ff1493);
+	box-shadow: 0 0 10px black;
+}
+
+..sparkle {
+	position: relative;
+}
+
+.sparkle::before {
+	rotate: 90deg;
+}
+.sparkle::before,
+.sparkle::after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 2px;
+	height: 20px;
+	background: linear-gradient(to bottom, transparent 0%, white 50%, transparent 100%);
+	opacity: 0.9;
+	pointer-events: none;
+	animation: sparkle-shine 1.5s infinite ease-in-out;
+}
+
+.sparkle::after {
+	transform: rotate(90deg);
+}
+
+@keyframes sparkle-shine {
+	0%,
+	100% {
+		opacity: 0.6;
+		transform: scale(0.8);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.3);
+	}
+}
