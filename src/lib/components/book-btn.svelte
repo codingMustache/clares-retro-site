@@ -84,8 +84,17 @@
 					<input type="checkbox" id="black" name="black" />
 				</div>
 				<div class="flex w-full flex-col">
-					<h4 class="w-full text-lg">Available Dates:</h4>
+					<h4 class="w-full text-lg">
+						What is your availability? Include dates/times that work best for you:
+					</h4>
 					<textarea name="dates" id=""></textarea>
+				</div>
+				<div class="flex w-full flex-col">
+					<h4 class="w-full text-lg">
+						If you have a budget we want to work within or any other info I should know please let
+						me know here:
+					</h4>
+					<textarea name="budget" id=""></textarea>
 				</div>
 				<div class="grid h-fit w-full grid-rows-[50px_fit]">
 					<label for="lname">

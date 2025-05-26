@@ -84,6 +84,7 @@ export const msgParser = (msg: EmailForm, attachments: Attachment[]) => {
           <p>The tattoo will be ${msg.tattooSize ?? "They didn't pick a size."}</p>
           <p>The tattoo will be ${msg.dates ?? "They didn't pick a size."}</p>
           <p>They describe their tattoo as follows: ${msg.description ?? "They didn't write a description."}</p>
+          <p> ${msg.budget ?? 'They didnt put a budget.'}</p>
           <p> ${msg.depositMethod ?? 'They didnt put a deposit method.'}</p>
           <p> ${msg.color ? 'They wanted color.' : "They didn't want color."}</p>
           <p> ${msg.black ? 'They wanted black and gray.' : "They didn't want black and gray."}</p>

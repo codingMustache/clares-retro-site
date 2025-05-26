@@ -14,7 +14,7 @@
 	}
 </script>
 
-<div class="flex flex-row items-center justify-between gap-2 p-2">
+<div class="flex flex-row items-center justify-between gap-2 bg-[#c3c3c3] p-2">
 	<audio bind:this={audioElement} class="hidden">
 		<source src="paris_hilton-stars_are_blind.mp3" type="audio/mpeg" />
 	</audio>
@@ -31,7 +31,7 @@
 			{/if}
 		</div>
 	</button>
-	<div class="relative h-full w-24 items-center justify-center overflow-hidden bg-white">
+	<div class="relative flex h-10 w-24 items-center justify-center overflow-hidden border bg-white">
 		<div class="animate-smooth-marquee w-full text-sm font-bold whitespace-nowrap text-pink-700">
 			<span>💖 Paris Hilton - Stars Are Blind 💖</span>
 		</div>

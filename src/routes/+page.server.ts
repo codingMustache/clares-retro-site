@@ -19,6 +19,7 @@ export type EmailForm = {
 	references: File[];
 	color: boolean;
 	black: boolean;
+	budget: string;
 };
 export const actions = {
 	'thank-you-for-booking': async ({ request }) => {
@@ -39,7 +40,8 @@ export const actions = {
 				depositMethod: form.get('depositMethod') as string,
 				references: form.getAll('references') as File[],
 				color: form.get('color') === 'true',
-				black: form.get('black') === 'true'
+				black: form.get('black') === 'true',
+				budget: form.get('budget') as string
 			};
 
 			let attachments: Attachment[] = [];
