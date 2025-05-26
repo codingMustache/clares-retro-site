@@ -7,7 +7,7 @@
 	<div class="flex flex-col justify-between px-2">
 		<div class=" grid grid-cols-[90px_100%] gap-1">
 			<p class="text-right font-bold">Name:</p>
-			<p>Clare Levstik</p>
+			<p>Clare</p>
 			<p class="text-right font-bold">Skills:</p>
 			<p>Tattooer</p>
 			<p class="text-right font-bold">Location:</p>
@@ -30,7 +30,9 @@
 		</div>
 		<div class="h103 flex w-full flex-row items-center text-lg">
 			<p>Follow Me:</p>
-			<InstagramSolid size="sm" />
+			<a href="https://www.instagram.com/claretattoos/">
+				<InstagramSolid size="sm" />
+			</a>
 		</div>
 	</div>
 </div>

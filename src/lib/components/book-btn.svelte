@@ -34,7 +34,7 @@
 		<form
 			class="flex max-h-[80dvh] flex-col overflow-x-clip overflow-y-auto p-3"
 			method="POST"
-			action="?/book"
+			action="?/thank-you-for-booking"
 		>
 			<div class="my-2 flex flex-wrap gap-2">
 				<h3 class="w-full font-bold">About you:</h3>

@@ -17,7 +17,7 @@
 
 <style>
 	.bg {
-		background: url('/prints.png'), rgb(255, 200, 200);
+		background: url('/bg.png'), rgb(255, 200, 200);
 		background-size: cover;
 		background-attachment: fixed;
 	}

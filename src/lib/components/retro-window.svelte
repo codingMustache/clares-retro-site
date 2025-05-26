@@ -14,7 +14,9 @@
 			</div>
 		</div>
 	</div>
-	<slot />
+	<div class="m-1 mt-0 bg-white">
+		<slot />
+	</div>
 </div>
 
 <style>

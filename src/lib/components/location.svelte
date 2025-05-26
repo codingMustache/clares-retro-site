@@ -5,10 +5,10 @@
 <div class="p-2">
 	<div class="relative h-full text-sm">
 		<img src={Map} alt="Tower Bar" width="200" height="200" class="h-full w-90 object-cover" />
-		<div class="absolute right-0 bottom-0 z-10 w-full bg-white p-2">
+		<div class="absolute right-0 bottom-0 z-10 w-full bg-white">
 			<div class="flex justify-between">
 				<p>Tower Bar</p>
-				<div class="flex gap-3">
+				<div class="flex gap-1">
 					<a
 						href="http://maps.apple.com/?q=32.749262,-117.091521"
 						aria-label="link for directions with apple maps"
@@ -74,7 +74,8 @@
 					</a>
 				</div>
 			</div>
-			<p>4757 University Ave, San Diego, CA 92105-1918</p>
+			<p class="text-sm">4757 University Ave, San Diego, CA 92105-1918</p>
+			<p class="text-xs">Parking avaliable behind the building</p>
 		</div>
 	</div>
 </div>

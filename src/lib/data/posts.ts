@@ -41,12 +41,6 @@ export default [
 		img: Flash1
 	},
 	{
-		id: '11',
-		content:
-			'This is the third post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
-		img: Flash2
-	},
-	{
 		id: '6',
 		content:
 			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
@@ -75,5 +69,11 @@ export default [
 		content:
 			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
 		img: Tiny
+	},
+	{
+		id: '11',
+		content:
+			'This is the third post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		img: Flash2
 	}
 ];
