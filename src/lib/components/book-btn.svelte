@@ -23,10 +23,10 @@
 			<div class="flex items-end justify-end gap-1">
 				<button on:click={() => (isOpen = false)} class="flex items-end justify-end gap-1">
 					<div class="win bg-gray-200">
-						<MinusOutline />
+						<MinusOutline size="sm" />
 					</div>
 					<div class="win bg-gray-200">
-						<CloseOutline />
+						<CloseOutline size="sm" />
 					</div>
 				</button>
 			</div>
@@ -37,7 +37,7 @@
 			action="?/book"
 		>
 			<div class="my-2 flex flex-wrap gap-2">
-				<h3 class="w-full">About you:</h3>
+				<h3 class="w-full font-bold">About you:</h3>
 				<div class="grid h-fit grid-rows-[50px_fit]">
 					<label for="fname">First name:</label>
 					<input type="text" id="fname" name="fname" />
@@ -64,73 +64,35 @@
 				</div>
 			</div>
 			<div class="flex flex-wrap gap-3">
-				<h3 class="w-full">About the Tattoo:</h3>
-				<div class="grid grid-cols-2">
-					<div class="grid h-fit grid-rows-[50px_fit]">
-						<label for="tattoo-location">Tattoo Placement:</label>
-						<select id="tattoo-location" name="tattooLocation" class="w-fit">
-							<option value="">-- Select a body part --</option>
-							<option value="arm_upper">Upper Arm</option>
-							<option value="arm_lower">Lower Arm / Forearm</option>
-							<option value="shoulder">Shoulder</option>
-							<option value="chest">Chest</option>
-							<option value="back_upper">Upper Back</option>
-							<option value="back_lower">Lower Back</option>
-							<option value="stomach">Stomach</option>
-							<option value="ribs">Ribs / Side</option>
-							<option value="thigh">Thigh</option>
-							<option value="calf">Calf</option>
-							<option value="ankle">Ankle</option>
-							<option value="foot">Foot</option>
-							<option value="hand">Hand</option>
-							<option value="wrist">Wrist</option>
-							<option value="neck">Neck</option>
-							<option value="nape">Nape of Neck</option>
-							<option value="face">Face</option>
-							<option value="head">Head / Scalp</option>
-							<option value="ear">Ear</option>
-							<option value="buttocks">Buttocks</option>
-						</select>
-					</div>
-					<div class="grid h-fit grid-rows-[50px_fit]">
-						<label for="tattoo-size">Tattoo Size:</label>
-						<select id="tattoo-size" name="tattooSize" class="w-fit">
-							<option value="">-- Select a size --</option>
-							<option value="extra_small">Extra Small (e.g. under 1")</option>
-							<option value="small">Small (1"–3")</option>
-							<option value="medium">Medium (3"–6")</option>
-							<option value="large">Large (6"–10")</option>
-							<option value="extra_large">Extra Large (10"+)</option>
-							<option value="half_sleeve">Half Sleeve</option>
-							<option value="full_sleeve">Full Sleeve</option>
-							<option value="back_piece">Back Piece</option>
-							<option value="full_back">Full Back</option>
-							<option value="full_leg">Full Leg</option>
-							<option value="full_body">Full Body</option>
-							<option value="custom">Custom / Other</option>
-						</select>
-					</div>
-				</div>
-				<div>
-					<input type="checkbox" id="color" name="color" />
-					<label for="color">Color</label>
-				</div>
-				<div class="my-3 flex flex-col">
-					<h4 class="w-full text-lg font-bold">Available Dates:</h4>
-					<div class="flex w-full gap-4">
-						<div class="grid h-fit w-30 grid-rows-[50px_fit]">
-							<label for="start-date">Start Date:</label>
-							<input type="date" id="start-date" name="startDate" />
-						</div>
-						<div class="grid h-fit w-30 grid-rows-[50px_fit]">
-							<label for="end-date">End Date:</label>
-							<input type="date" id="end-date" name="endDate" />
-						</div>
-					</div>
+				<h3 class="w-full font-bold">About the Tattoo:</h3>
+
+				<div class="grid h-fit w-full grid-rows-[50px_fit]">
+					<label for="tattoo-location">
+						Where do you want your tattoo placed? Please include if we are working around other
+						tattoos!
+					</label>
+					<textarea id="tattooLocation" name="tattooLocation"></textarea>
 				</div>
 				<div class="grid h-fit w-full grid-rows-[50px_fit]">
-					<label for="lname">Description:</label>
-					<textarea rows="4" name="description" placeholder="Description of the tattoo"></textarea>
+					<label for="tattoSize">What size do you want your tattoo?:</label>
+					<textarea id="tattoSize" name="tattoSize"></textarea>
+				</div>
+				<div class="flex items-center gap-3">
+					<label for="color">Color</label>
+					<input type="checkbox" id="color" name="color" />
+					<label for="color">Black & Grey</label>
+					<input type="checkbox" id="black" name="black" />
+				</div>
+				<div class="flex w-full flex-col">
+					<h4 class="w-full text-lg">Available Dates:</h4>
+					<textarea name="dates" id=""></textarea>
+				</div>
+				<div class="grid h-fit w-full grid-rows-[50px_fit]">
+					<label for="lname">
+						Please type out a description of what you are wanting to get tattooed! Please include
+						any specifics for your design:
+					</label>
+					<textarea rows="4" name="description"></textarea>
 				</div>
 				<div class="grid h-fit grid-rows-[50px_fit]">
 					<label for="deposit-method">How would you like to handle deposit?</label>

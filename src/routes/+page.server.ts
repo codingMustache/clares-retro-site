@@ -13,12 +13,12 @@ export type EmailForm = {
 	email: string;
 	tattooLocation: string;
 	tattooSize: string;
-	startDate: Date;
-	endDate: Date;
+	dates: string;
 	description: string;
 	depositMethod: string;
 	references: File[];
 	color: boolean;
+	black: boolean;
 };
 export const actions = {
 	book: async ({ request }) => {
@@ -33,12 +33,12 @@ export const actions = {
 			email: form.get('email') as string,
 			tattooLocation: form.get('tattooLocation') as string,
 			tattooSize: form.get('tattooSize') as string,
-			startDate: new Date(form.get('startDate') as string),
-			endDate: new Date(form.get('endDate') as string),
+			dates: form.get('startDate') as string,
 			description: form.get('description') as string,
 			depositMethod: form.get('depositMethod') as string,
 			references: form.getAll('references') as File[],
-			color: form.get('color') === 'true'
+			color: form.get('color') === 'true',
+			black: form.get('black') === 'true'
 		};
 
 		let attachments: Attachment[] = [];
