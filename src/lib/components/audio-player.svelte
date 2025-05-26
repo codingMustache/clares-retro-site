@@ -23,7 +23,7 @@
 		on:click={togglePlayback}
 		class="group blorder-black h-12 w-12 items-center justify-center rounded-full border bg-gray-300 text-center text-gray-600 shadow-[inset_0px_0px_7px_5px_rgba(255,255,255,0.2)] transition hover:shadow-[inset_0px_0px_5px_3px_rgba(0,0,0,0.2)]"
 	>
-		<div class="group-hover:scale-90">
+		<div class="flex justify-center text-lg group-hover:scale-90">
 			{#if isPlaying}
 				<PauseSolid size="lg" />
 			{:else}
