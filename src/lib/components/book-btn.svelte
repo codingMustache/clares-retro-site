@@ -14,7 +14,7 @@
 </button>
 
 <dialog
-	open={true}
+	open={isOpen}
 	class="border-groove win fixed top-10 z-15 m-auto max-h-full w-3/4 max-w-5xl bg-[#c0c0c0] shadow-xl shadow-black max-md:w-[90dvw]"
 >
 	<div>
@@ -68,7 +68,7 @@
 				<div class="grid grid-cols-2">
 					<div class="grid h-fit grid-rows-[50px_fit]">
 						<label for="tattoo-location">Tattoo Placement:</label>
-						<select id="tattoo-location" name="tattoo_location" class="w-fit">
+						<select id="tattoo-location" name="tattooLocation" class="w-fit">
 							<option value="">-- Select a body part --</option>
 							<option value="arm_upper">Upper Arm</option>
 							<option value="arm_lower">Lower Arm / Forearm</option>
@@ -94,7 +94,7 @@
 					</div>
 					<div class="grid h-fit grid-rows-[50px_fit]">
 						<label for="tattoo-size">Tattoo Size:</label>
-						<select id="tattoo-size" name="tattoo_size" class="w-fit">
+						<select id="tattoo-size" name="tattooSize" class="w-fit">
 							<option value="">-- Select a size --</option>
 							<option value="extra_small">Extra Small (e.g. under 1")</option>
 							<option value="small">Small (1"–3")</option>
@@ -111,17 +111,20 @@
 						</select>
 					</div>
 				</div>
-
+				<div>
+					<input type="checkbox" id="color" name="color" />
+					<label for="color">Color</label>
+				</div>
 				<div class="my-3 flex flex-col">
 					<h4 class="w-full text-lg font-bold">Available Dates:</h4>
 					<div class="flex w-full gap-4">
 						<div class="grid h-fit w-30 grid-rows-[50px_fit]">
 							<label for="start-date">Start Date:</label>
-							<input type="date" id="start-date" name="start_date" />
+							<input type="date" id="start-date" name="startDate" />
 						</div>
 						<div class="grid h-fit w-30 grid-rows-[50px_fit]">
 							<label for="end-date">End Date:</label>
-							<input type="date" id="end-date" name="end_date" />
+							<input type="date" id="end-date" name="endDate" />
 						</div>
 					</div>
 				</div>
@@ -131,7 +134,7 @@
 				</div>
 				<div class="grid h-fit grid-rows-[50px_fit]">
 					<label for="deposit-method">How would you like to handle deposit?</label>
-					<select id="depositMethod" name="deposit-method" class="w-fit">
+					<select id="depositMethod" name="depositMethod" class="w-fit">
 						<option value="" selected>Select a payment method</option>
 						<option value="venmo">Venmo</option>
 						<option value="zelle">Zelle</option>

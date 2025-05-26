@@ -17,20 +17,20 @@
 				<p>Tower Tattoo</p>
 			</a>
 			<p class="text-right font-bold">Experience:</p>
-			<p class="grid w-fit grid-cols-5 text-fuchsia-600">
-				<HeartSolid />
-				<HeartSolid />
-				<HeartSolid />
-				<HeartSolid />
-				<HeartOutline />
+			<p class="flex h-4 items-center text-fuchsia-600">
+				<HeartSolid size="sm" />
+				<HeartSolid size="sm" />
+				<HeartSolid size="sm" />
+				<HeartSolid size="sm" />
+				<HeartOutline size="sm" />
 				<span class="text-xs text-black">
 					{new Date().getFullYear() - 2017}yrs
 				</span>
 			</p>
 		</div>
-		<div class="flex w-full flex-row items-center text-lg">
+		<div class="h103 flex w-full flex-row items-center text-lg">
 			<p>Follow Me:</p>
-			<InstagramSolid />
+			<InstagramSolid size="sm" />
 		</div>
 	</div>
 </div>

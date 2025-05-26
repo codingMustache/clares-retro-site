@@ -7,10 +7,10 @@
 		<p class="text-white">Girlpop OS</p>
 		<div class="flex items-end justify-end gap-1">
 			<div class="win bg-gray-200">
-				<MinusOutline />
+				<MinusOutline size="sm" />
 			</div>
 			<div class="win bg-gray-200">
-				<CloseOutline />
+				<CloseOutline size="sm" />
 			</div>
 		</div>
 	</div>

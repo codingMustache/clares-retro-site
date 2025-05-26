@@ -1,26 +1,23 @@
 import nodemailer from 'nodemailer';
-import { emailPW, email } from '$env/static/private';
+import { EMAIL_SENDER, EMAIL_PASSWORD, EMAIL_TO, EMAIL_FROM } from '$env/static/private';
+import type { Attachment } from 'nodemailer/lib/mailer';
+import type { EmailForm } from '../../routes/+page.server';
 
-/**
- *
- * @param {String} msg : HTML message to be sent
- * @param {any} attachments : array of attachments
- */
-export const emailer = async (msg, attachments = []) => {
+export const emailer = async (msg: string, attachments: Attachment[] = []) => {
 	try {
 		const transporter = nodemailer.createTransport({
 			service: 'icloud',
 			auth: {
-				user: email,
-				pass: emailPW
+				user: EMAIL_SENDER,
+				pass: EMAIL_PASSWORD
 			}
 		});
 
 		await transporter.verify();
 
 		const mailData = {
-			from: email,
-			to: email,
+			from: EMAIL_TO,
+			to: EMAIL_FROM,
 			subject: 'New Client - Contact Form Submission',
 			html: msg,
 			attachments: attachments
@@ -33,23 +30,28 @@ export const emailer = async (msg, attachments = []) => {
 	}
 };
 
-export const imgParser = async (files) => {
-	const arrayBuffer = files.map((x) => x.arrayBuffer());
+export const imgParser = async (files: File[]) => {
+	try {
+		const arrayBuffer = files.map((x) => x.arrayBuffer());
 
-	const settled = (await Promise.allSettled(arrayBuffer)).map((x) => x.value);
+		const settled = (await Promise.allSettled(arrayBuffer)).map((x) => x.value);
 
-	const buffer = settled.map((x) => Buffer.from(x));
+		const buffer = settled.map((x) => Buffer.from(x));
 
-	const attachments = files.map((x, i) => ({
-		filename: x.name,
-		content: buffer[i],
-		contentType: 'image/png'
-	}));
+		const attachments = files.map((x, i) => ({
+			filename: x.name,
+			content: buffer[i],
+			contentType: 'image/png'
+		}));
 
-	return attachments;
+		return attachments satisfies Attachment[];
+	} catch (e) {
+		console.error(`Error parsing images: ${e}`);
+		return [];
+	}
 };
 
-export const msgParser = (msg, attachments) => {
+export const msgParser = (msg: EmailForm, attachments: Attachment[]) => {
 	return `
     <!DOCTYPE html>
       <html>
@@ -74,19 +76,19 @@ export const msgParser = (msg, attachments) => {
           </style>
         </head>
         <body>
-          <p>${msg['first name'] ? msg['firstName'] : "They didn't write a last name"} ${msg['lastName'] ? msg['lastName'] : "They didn't write a last name"} is interested in a tattoo.</p>
-          <p>Their pronouns are ${msg['pronoun'] ? msg['pronoun'] : "They didn't pick a pronoun"}.</p>
-          <p>They can be reached at ${msg['email']} or ${msg['phone'] ? msg['phone'] : "They didn't write an email "}.</p>
+          <p>${msg.fname ?? "They didn't write a last name"} ${msg.lname ?? "They didn't write a last name"} is interested in a tattoo.</p>
+          <p>Their pronouns are ${msg.pronouns ?? "They didn't pick a pronoun"}.</p>
+          <p>They can be reached at ${msg.email} or ${msg.phone ?? "They didn't write an email "}.</p>
           <p>They describe their tattoo as follows: ${msg['description'] ? msg['description'] : "They didn't write a description"}.</p>
-          <p>The tattoo will be located on their ${msg['location'] ? msg['location'] : "They didn't pick a location"}.</p>
-          <p>The tattoo will be ${msg['size'] ? msg['size'] : "They didn't pick a size"} inches.</p>
-          <p>The tattoo will be in color: ${msg['color'] ? msg['color'] : "They didn't pick a color"}.</p>
+          <p>The tattoo will be located on their ${msg.tattooLocation ?? "They didn't pick a location"}.</p>
+          <p>The tattoo will be ${msg.tattooSize ?? "They didn't pick a size"} inches.</p>
+          <p> ${msg.color ? 'They wanted color' : "They didn't want color"}.</p>
           ${
 						attachments.length > 0
-							? attachments.map((/** @type {any} */ x) => `<img src="cid:${x}">`).join('')
+							? attachments.map((x) => `<img src="cid:${x}">`).join('')
 							: "<p>They didn't attache any references.</p>"
 					}
-          <p>Additional notes: ${msg['misc'] ? msg['misc'] : ''}.</p>
+          <p>Additional notes: ${msg.description}.</p>
           </body>
       </html>
   `;
