@@ -25,7 +25,7 @@
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
-		"flowbite-svelte-icons": "^2.1.1",
+		"flowbite-svelte-icons": "^2.2.0",
 		"globals": "^16.0.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
@@ -45,6 +45,7 @@
 		"@threlte/theatre": "^3.0.3",
 		"@types/three": "^0.176.0",
 		"html-midi-player": "^1.5.0",
+		"nodemailer": "^7.0.3",
 		"three": "^0.176.0"
 	}
 }

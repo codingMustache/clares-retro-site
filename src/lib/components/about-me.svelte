@@ -1,31 +1,36 @@
 <script>
-	import Angel from '$lib/images/angels_41.gif';
-	import { InstagramSolid } from 'flowbite-svelte-icons';
+	import { InstagramSolid, HeartSolid, HeartOutline } from 'flowbite-svelte-icons';
 </script>
 
-<div
-	class="sparkle relative grid grid-cols-2 border-4 border-fuchsia-400 bg-pink-200 p-3 px-3 py-6 text-fuchsia-700"
->
-	<div class="absolute -right-10 -bottom-15 scale-50">
-		<img src={Angel} alt="" />
-	</div>
-	<div class="flex flex-col justify-between">
-		<p>About Me:</p>
-		<div class="h-32 w-32 bg-black"></div>
-	</div>
-	<div class="flex flex-col justify-between">
-		<div class=" grid h-fit grid-cols-2">
-			<p>Name:</p>
-			<p>Clare</p>
-			<p>Skills:</p>
-			<p>Slangin' Ink</p>
-			<p>Location:</p>
+<div class="grid grid-cols-2 p-2">
+	<div class=" h-60 w-60 bg-black"></div>
+	<div class="flex flex-col justify-between px-2">
+		<div class=" grid grid-cols-[100px_100%] gap-1">
+			<p class="text-right font-bold">Name:</p>
+			<p>Clare Levstik</p>
+			<p class="text-right font-bold">Skills:</p>
+			<p>Tattooer</p>
+			<p class="text-right font-bold">Location:</p>
 			<p>San Diego, CA</p>
-			<p>Shop:</p>
-			<p>Tower Tattoo</p>
+			<p class="text-right font-bold">Shop:</p>
+			<a class="cursor-pointer" href=" http://maps.apple.com/?q=32.749262,-117.091521">
+				<p>Tower Tattoo</p>
+			</a>
+			<p class="text-right font-bold">Experience:</p>
+			<p class="grid w-fit grid-cols-5 text-fuchsia-600">
+				<HeartSolid />
+				<HeartSolid />
+				<HeartSolid />
+				<HeartSolid />
+				<HeartOutline />
+				<span class="text-xs text-black">
+					{new Date().getFullYear() - 2017}yrs
+				</span>
+			</p>
 		</div>
-		<div class=" h-5">
-			<InstagramSolid size="lg" />
+		<div class="flex w-full flex-row items-center text-lg">
+			<p>Follow Me:</p>
+			<InstagramSolid />
 		</div>
 	</div>
 </div>
