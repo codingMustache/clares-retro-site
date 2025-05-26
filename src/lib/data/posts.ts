@@ -1,7 +1,6 @@
 import BabyGirl from '$lib/images/portfolio/baby-girl.jpeg';
 import Blah from '$lib/images/portfolio/blah.jpeg';
 import Cowboy from '$lib/images/portfolio/cowboy.jpeg';
-import Flame from '$lib/images/portfolio/flame.jpeg';
 import Flash1 from '$lib/images/portfolio/flash1.jpeg';
 import Flash2 from '$lib/images/portfolio/flash2.jpeg';
 import Flash3 from '$lib/images/portfolio/flash3.jpeg';
@@ -27,12 +26,6 @@ export default [
 		content:
 			'This is the second post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
 		img: Cowboy
-	},
-	{
-		id: '4',
-		content:
-			'This is the second post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
-		img: Flame
 	},
 	{
 		id: '5',

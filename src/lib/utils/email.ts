@@ -16,8 +16,8 @@ export const emailer = async (msg: string, attachments: Attachment[] = []) => {
 		await transporter.verify();
 
 		const mailData = {
-			from: EMAIL_TO,
-			to: EMAIL_FROM,
+			from: EMAIL_FROM,
+			to: EMAIL_TO,
 			subject: 'New Client - Contact Form Submission',
 			html: msg,
 			attachments: attachments
