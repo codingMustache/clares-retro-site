@@ -4,7 +4,7 @@
 
 <div class="grid w-full grid-cols-1 p-2 max-sm:grid-cols-1">
 	<div class=" h-60 w-full bg-black"></div>
-	<div class="flex flex-col justify-between px-2">
+	<div class="mx-auto flex flex-col justify-between px-2">
 		<div class=" grid grid-cols-[90px_100%] gap-1">
 			<p class="text-right font-bold">Name:</p>
 			<p>Clare</p>
@@ -28,11 +28,11 @@
 				</span>
 			</p>
 		</div>
-		<div class="h103 flex w-full flex-row items-center text-lg">
-			<p>Follow Me:</p>
-			<a href="https://www.instagram.com/claretattoos/">
-				<InstagramSolid size="sm" />
-			</a>
-		</div>
+	</div>
+	<div class="flex w-full flex-row items-center text-lg">
+		<p>Follow Me:</p>
+		<a href="https://www.instagram.com/claretattoos/">
+			<InstagramSolid size="sm" />
+		</a>
 	</div>
 </div>

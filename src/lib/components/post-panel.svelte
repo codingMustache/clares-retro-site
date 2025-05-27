@@ -26,7 +26,7 @@
 <div>
 	<div class="flex flex-col gap-2 p-4 shadow">
 		<p class="text-black">{post.content}</p>
-		<img src={post.img} alt="" class="mx-auto h-auto w-90" />
+		<img src={post.img} alt="" width="100px" height="auto" class="mx-auto h-auto w-full" />
 		<p class="mt-2 text-sm">{postDate}</p>
 	</div>
 </div>
