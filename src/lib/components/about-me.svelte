@@ -2,7 +2,7 @@
 	import { InstagramSolid, HeartSolid, HeartOutline } from 'flowbite-svelte-icons';
 </script>
 
-<div class="grid grid-cols-2 p-2 max-sm:grid-cols-1">
+<div class="grid w-full grid-cols-1 p-2 max-sm:grid-cols-1">
 	<div class=" h-60 w-full bg-black"></div>
 	<div class="flex flex-col justify-between px-2">
 		<div class=" grid grid-cols-[90px_100%] gap-1">

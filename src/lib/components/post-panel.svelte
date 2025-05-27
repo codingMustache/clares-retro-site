@@ -4,11 +4,13 @@
 		content: string;
 		img: string;
 	};
+	export let index: number; // Add this to control recency order
 
+	// Subtract (index * 6 + 1 to 5) days to simulate slightly staggered posting
 	const date = new Date(
-		Date.now() +
-			(parseInt(post.id) * 7 + Math.floor(Math.random() * 7)) * 864e5 +
-			Math.floor(Math.random() * 864e5)
+		Date.now() -
+			(index * 2 + Math.floor(Math.random() * 2)) * 864e5 -
+			Math.floor(Math.random() * 3600 * 1000) // subtract up to 1 hour
 	);
 
 	const dateStr = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
@@ -21,12 +23,10 @@
 	const postDate = `${dateStr} @ ${timeStr}`;
 </script>
 
-<div class="">
-	<div class=" gap -2 flex flex-col p-4 shadow">
+<div>
+	<div class="flex flex-col gap-2 p-4 shadow">
 		<p class="text-black">{post.content}</p>
 		<img src={post.img} alt="" class="mx-auto h-auto w-90" />
-		<p class="mt-2 text-sm">
-			{postDate}
-		</p>
+		<p class="mt-2 text-sm">{postDate}</p>
 	</div>
 </div>

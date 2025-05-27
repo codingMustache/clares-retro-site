@@ -3,9 +3,9 @@
 </script>
 
 <div class="p-2">
-	<div class="relative h-full text-sm">
+	<div class=" h-full text-sm">
 		<img src={Map} alt="Tower Bar" width="200" height="200" class="h-full w-90 object-cover" />
-		<div class="absolute right-0 bottom-0 z-10 w-full bg-white">
+		<div class=" right-0 bottom-0 z-10 w-full bg-white">
 			<div class="flex justify-between">
 				<p>Tower Bar</p>
 				<div class="flex gap-1">

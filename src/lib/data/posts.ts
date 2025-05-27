@@ -11,62 +11,52 @@ import Tiny from '$lib/images/portfolio/tiny.jpeg';
 export default [
 	{
 		id: '1',
-		content:
-			'This is the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'The baddest',
 		img: BabyGirl
 	},
 	{
 		id: '2',
-		content:
-			'This is the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Blah Blah Blah...',
 		img: Blah
 	},
 	{
 		id: '3',
-		content:
-			'This is the second post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Giddy up cowboy',
 		img: Cowboy
 	},
 	{
 		id: '5',
-		content:
-			'This is the third post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Hello there lover boy',
 		img: Flash1
 	},
 	{
 		id: '6',
-		content:
-			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Eye hate you',
 		img: Flash3
 	},
 	{
 		id: '7',
-		content:
-			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'I bought you some flowers',
 		img: Flowers
 	},
 	{
 		id: '8',
-		content:
-			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Himbo',
 		img: Himbo
 	},
 	{
 		id: '9',
-		content:
-			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Whats up playboy',
 		img: PBBunny
 	},
 	{
 		id: '10',
-		content:
-			'This is the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Dainty',
 		img: Tiny
 	},
 	{
 		id: '11',
-		content:
-			'This is the third post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod...',
+		content: 'Avaliable flash, book now',
 		img: Flash2
 	}
 ];

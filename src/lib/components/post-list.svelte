@@ -4,10 +4,10 @@
 	import posts from '$lib/data/posts';
 </script>
 
-<div class="flex flex-col gap-2 max-lg:mx-auto">
-	{#each posts as post (post.id)}
+<div class="flex flex-col items-center justify-center gap-2 max-lg:mx-auto">
+	{#each posts as post, index (post.id)}
 		<RetroWindow>
-			<PostPanel {post} />
+			<PostPanel {post} {index} />
 		</RetroWindow>
 	{/each}
 </div>
