@@ -38,14 +38,14 @@ export const actions = {
 				dates: form.get('startDate') as string,
 				description: form.get('description') as string,
 				depositMethod: form.get('depositMethod') as string,
-				references: form.getAll('references') as File[],
+				references: (form.getAll('references') as File[]) ?? null,
 				color: form.get('color') === 'true',
 				black: form.get('black') === 'true',
 				budget: form.get('budget') as string
 			};
 
 			let attachments: Attachment[] = [];
-			if (formObj.references && formObj.references.length > 0) {
+			if (formObj.references && formObj.references[0]) {
 				attachments = await imgParser(formObj.references);
 			}
 
