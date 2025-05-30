@@ -1,4 +1,3 @@
-import Nicki from '$lib/images/top4/nicki.jpeg';
 import Paris from '$lib/images/top4/paris.jpeg';
 import Kris from '$lib/images/top4/kris.jpeg';
 import Girls from '$lib/images/top4/girls.jpeg';
