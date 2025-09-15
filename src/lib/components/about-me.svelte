@@ -1,9 +1,10 @@
 <script>
-	import { InstagramSolid, HeartSolid, HeartOutline } from 'flowbite-svelte-icons';
+  import clare from "$lib/images/Clare.jpeg";
+  import { HeartOutline, HeartSolid, InstagramSolid } from 'flowbite-svelte-icons';
 </script>
 
 <div class="grid w-full grid-cols-1 p-2 max-sm:grid-cols-1">
-	<div class=" h-60 w-full bg-black"></div>
+	<img src={clare} class="w-full object-cover h-60" alt="Clare at diner">
 	<div class="mx-auto flex flex-col justify-between px-2">
 		<div class=" grid grid-cols-[90px_100%] gap-1">
 			<p class="text-right font-bold">Name:</p>
